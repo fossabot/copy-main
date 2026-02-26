@@ -1,0 +1,39 @@
+{
+  "name": "the-copy-monorepo",
+  "private": true,
+  "packageManager": "pnpm@10.27.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev --filter=@the-copy/web --filter=@the-copy/backend",
+    "dev:web": "turbo dev --filter=@the-copy/web",
+    "dev:backend": "turbo dev --filter=@the-copy/backend",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean && rm -rf node_modules",
+    "ci": "turbo lint type-check test build",
+    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/start-app.ps1",
+    "stop": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/kill-ports.ps1",
+    "start:redis": "powershell -Command \"Start-Process -FilePath '.\\redis\\redis-server.exe' -WindowStyle Minimized\"",
+    "check:exports": "node scripts/check-duplicate-exports.mjs",
+    "audit:code": "npx tsx scripts/code-auditor.ts"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.9.3",
+    "cypress": "^15.8.0",
+    "sharp": "^0.34.5",
+    "vitest": "^4.0.6"
+  },
+  "overrides": {
+    "@types/d3-array": "^3.2.1",
+    "@types/d3-scale": "^4.0.8",
+    "@types/d3-shape": "^3.1.6",
+    "@types/babel__traverse": "^7.20.5",
+    "@types/eslint": "^8.56.10",
+    "esbuild": "^0.25.0"
+  }
+}
