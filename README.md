@@ -1,4 +1,6 @@
 # النسخة (The Copy) - Platform for Arabic Drama Analysis
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCLOCKWORK-TEMPTATION%2Fcopy-main.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FCLOCKWORK-TEMPTATION%2Fcopy-main?ref=badge_shield)
+
 
 <div dir="rtl">
 
@@ -185,6 +187,9 @@ NEXT_PUBLIC_SENTRY_DSN=your_public_dsn
 ## 📄 License
 
 All rights reserved © 2024 The Copy Platform
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCLOCKWORK-TEMPTATION%2Fcopy-main.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FCLOCKWORK-TEMPTATION%2Fcopy-main?ref=badge_large)
 
 ## 🤝 Contributing
 
